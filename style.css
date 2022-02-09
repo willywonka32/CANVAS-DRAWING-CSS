@@ -1,0 +1,139 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: rgb(62, 17, 82);
+}
+.container
+{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.neck
+{
+    background-color: black;
+    width: 210px;
+    height: 250px;
+    position: absolute;
+    z-index: -1;
+    top: 250px;
+    clip-path: polygon(88% 0, 100% 90%, 51% 100%, 0 91%, 14% 0);
+}
+.shoulder
+{
+    width: 250px;
+    background: black;
+    height: 250px;
+    position: relative;
+    transform: rotateZ(-35deg) skewX(30deg);
+   border-radius: 10px;
+}
+.face
+{
+    width: 180px;
+    height: 250px;
+    background: black;
+    border-radius: 49% 49% 48% 49% / 27% 27% 55% 54%  ;
+    transform: translateY(-10%);
+    position: relative;
+}
+.face .eye1
+{
+    width: 50px;
+    height: 70px;
+    background: white;
+    position: absolute;
+    left: 12%;
+    top: 30%;
+    transform: rotateZ(-10deg);
+    clip-path: polygon(0 20%, 91% 54%, 46% 66%, 36% 63%);
+}
+.face .eye2
+{
+    width: 50px;
+    height: 70px;
+    background: white;
+    position: absolute;
+    right: 12%;
+    top: 30%;
+    transform: rotateY(180deg) rotateZ(-10deg);
+    clip-path: polygon(0 20%, 91% 54%, 46% 66%, 36% 63%);
+}
+.face .lip
+{
+    width: 100px;
+    height: 40px;
+    background: black;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: polygon(48% 32%, 71% 28%, 89% 42%, 75% 23%, 19% 24%, 4% 43%, 21% 28%);
+    z-index: 4;
+}
+
+.face::before
+{
+    content: "";
+    position: absolute;
+   bottom:-8px;
+    left: 50%;
+    width: 100%;
+    height: 135px;
+    background: #E8BEAC;
+    clip-path: polygon(48% 30%, 90% 20%, 84% 77%, 63% 100%, 37% 100%, 15% 79%, 10% 20%);
+    transform: translateX(-50%);
+    z-index: 3;
+}
+.face::after
+{
+    content: "";
+    position: absolute;
+   bottom:0px;
+    left: 50%;
+    width: 125%;
+    height: 145px;
+    background: black;
+    clip-path: polygon(48% 30%, 90% 20%, 84% 77%, 63% 100%, 37% 100%, 15% 79%, 10% 20%);
+    transform: translateX(-50%);
+}
+.ear-container
+{
+    width: 154px;
+ 
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ear1
+{
+    width: 150px;
+    height: 140px;
+    background-color: black;
+    clip-path: polygon(20% 0%, 25% 45%, 30% 70%, 0% 100%);
+    transform: translate(-13px,30px);
+
+}
+.ear2
+{
+    width: 150px;
+    height: 140px;
+    background-color: black;
+    clip-path: polygon(20% 0%, 25% 45%, 30% 70%, 0% 100%);
+    transform: translate(13px,30px) rotateY(180deg);
+
+}
